@@ -1,0 +1,44 @@
+SNORT is a network based intrusion detection system which is written in C programming language. It was developed in 1998 by Martin Roesch. Now it is developed by Cisco. It is free open-source software. It can also be used as a packet sniffer to monitor the system in real time. The network admin can use it to watch all the incoming packets and find the ones which are dangerous to the system. It is based on library packet capture tool. The rules are fairly easy to create and implement and it can be deployed in any kind of operating system and any kind of network environment. The main reason of the popularity of this IDS over others is that it is a free-to-use software and also open source because of which any user can be able to use it as the way he wants. 
+Features: 
+
+Real-time traffic monitor
+Packet logging
+Analysis of protocol
+Content matching
+OS fingerprinting
+Can be installed in any network environment.
+Creates logs
+Open Source
+Rules are easy to implement
+Installation Steps: 
+In Linux: 
+
+Step-1: wget https://www.snort.org/downloads/snort/snort-2.9.15.tar.gz 
+Step-2: tar xvzf snort-2.9.15.tar.gz 
+Step-3: cd snort-2.9.15 
+Step-4: ./configure –enable-sourcefire && make && sudo make install 
+In Windows: 
+
+Step-1: Download SNORT installer from https://www.snort.org/downloads/snort/Snort_2_9_15_Installer.exe 
+Step-1: Execute the Snort_2_9_15_Installer.exe 
+Different SNORT Modes:
+
+Sniffer Mode – 
+To print TCP/IP header use command ./snort -v 
+To print IP address along with header use command ./snort -vd 
+Packet Logging – 
+To store packet in disk you need to give path where you want to store the logs. For this command is./snort -dev -l ./SnortLogs. 
+Activate network intrusion detection mode – 
+To start this mode use this command ./snort -dev -l ./SnortLogs -h 192.127.1.0/24 -c snort.conf 
+Types of Rules in SNORT:
+
+There are 3 types of rules in SNORT, those are
+
+Alert Rules: This uses the alert technique to produce notifications.
+Logging Rules: It logs each individual alert as soon as it is generated.
+Pass Rules: If the packet is deemed malicious, it is ignored and dropped.
+Basic Usages: 
+
+Packet Sniffing: The way traffic is being transmitted can be thoroughly examined by gathering the individual packets that travel to and from devices on the network.
+Generates Alerts: It generates warnings based on the configuration file’s rules when it discovers unusual or malicious activity, the possibility of a vulnerability being exploited, or a network threat that compromises the organization’s security policy.
+Debug Traffic: After the traffic has been logged, any malicious packets and configuration problems are checked.
