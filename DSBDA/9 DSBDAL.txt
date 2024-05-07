@@ -1,0 +1,21 @@
+import requests
+import bs4
+request1=requests.get('https://thedermaco.com/product/1-hyaluronic-sunscreen-aqua-gel-with-spf-50-pa-80g')
+request1
+
+request1.content
+
+soup=bs4.BeautifulSoup(request1.text)
+soup
+
+def get_reviews(soup):
+    review_elements = soup.select("div.review")
+
+
+rating =soup.find('div',{'class' : 'rating'})
+print(rating)
+
+
+ratings=soup.find_all('div',{'class' : 'sc-dUcZlc fWnThg'})
+for rating in ratings :
+    print(rating+"\n\n")
